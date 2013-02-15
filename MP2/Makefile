@@ -1,10 +1,10 @@
-ICCDIR = /home/icc/opt/intel/bin
+ICCDIR = /home/icc/opt/intel/bin#location of icc on my localmachine
 
-CC = $(ICCDIR)/icc
+CC = icc#$(ICCDIR)/icc
 CCOPTS = -c -g -O3
 LINKOPTS = -g 
 
-all: vecstencil gen
+all: vecstencil
 
 vecstencil: vecstencil.o 
 	$(CC) $(LINKOPTS) -o $@ $^
